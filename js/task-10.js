@@ -9,21 +9,28 @@ const refs = {
   output: document.querySelector('#boxes'),
 };
 
+let elWidth = 20;
+let elHeight = 20;
+
 const createBoxes = (amount) => {
   const arr = Array(Number(refs.input.value))
     .fill('')
-    .map(() => `<div></div>`);
+    .map(
+      () =>
+        `<div style="width: ${(elWidth += 10)}px; height: ${(elHeight += 10)}px;  background-color: ${getRandomHexColor()}"></div>`
+    );
 
   refs.output.insertAdjacentHTML('beforeend', arr.join(''));
 
-  for (let i = 0; i < refs.output.childNodes.length; i += 1) {
-    refs.output.childNodes[i].style.width = '30px';
+  // for (let i = 1; i < refs.output.childNodes.length; i += 1) {
+  //   refs.output.childNodes[i].style.width = elSize += 10;
+  //   // refs.output.childNodes[i].style.width = newSize;
 
-    refs.output.childNodes[i].style.height = '30px';
-    refs.output.childNodes[i].style.backgroundColor = getRandomHexColor();
-  }
+  //   refs.output.childNodes[i].style.height = elSize;
+  //   refs.output.childNodes[i].style.backgroundColor = getRandomHexColor();
+  // }
 
-  // refs.output.childNodes.forEach((el) => {
+  // refs.output.childNodes.forEach((el, ind) => {
   //   el.style.width = '30px';
   //   el.style.height = '30px';
   //   el.style.backgroundColor = getRandomHexColor();

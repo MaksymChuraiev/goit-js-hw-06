@@ -9,4 +9,4 @@ const onInputName = (event) => {
     : (refs.output.textContent = event.currentTarget.value.trim());
 };
 
-refs.input.addEventListener('change', onInputName);
+refs.input.addEventListener('input', onInputName);
