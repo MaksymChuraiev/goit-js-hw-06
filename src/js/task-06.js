@@ -3,7 +3,10 @@ const refs = {
 };
 
 const onInputBorderChangeColor = (event) => {
-  if (event.currentTarget.value.length === Number(refs.input.dataset.length)) {
+  if (
+    event.currentTarget.value.trim().length ===
+    Number(refs.input.dataset.length)
+  ) {
     refs.input.classList.add('valid');
     refs.input.classList.remove('invalid');
   } else {

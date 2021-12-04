@@ -16,6 +16,10 @@ const images = [
 const addImage = (images) => {
   const galleryEl = document.querySelector('.gallery');
 
+  galleryEl.style.listStyle = 'none';
+  galleryEl.style.display = 'flex';
+  galleryEl.style.flexDirection = 'column';
+
   const listImage = images
     .map((image) => `<li><img alt = '${image.alt}' src = '${image.url}'></li>`)
     .join('');
