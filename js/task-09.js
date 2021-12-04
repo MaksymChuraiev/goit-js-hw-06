@@ -14,5 +14,3 @@ const onChangeBackgroundColor = (event) => {
 };
 
 refs.btnInput.addEventListener('click', onChangeBackgroundColor);
-
-console.log(String(getRandomHexColor()));
