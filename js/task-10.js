@@ -21,26 +21,13 @@ const createBoxes = (amount) => {
     );
 
   refs.output.insertAdjacentHTML('beforeend', arr.join(''));
-
-  // for (let i = 1; i < refs.output.childNodes.length; i += 1) {
-  //   refs.output.childNodes[i].style.width = elSize += 10;
-  //   // refs.output.childNodes[i].style.width = newSize;
-
-  //   refs.output.childNodes[i].style.height = elSize;
-  //   refs.output.childNodes[i].style.backgroundColor = getRandomHexColor();
-  // }
-
-  // refs.output.childNodes.forEach((el, ind) => {
-  //   el.style.width = '30px';
-  //   el.style.height = '30px';
-  //   el.style.backgroundColor = getRandomHexColor();
-  //   console.log(el);
-  // });
 };
 
 const destroyBoxes = () => {
   refs.output.innerHTML = '';
   refs.input.value = '';
+  elWidth = 20;
+  elHeight = 20;
 };
 
 refs.btnCreate.addEventListener('click', createBoxes);
