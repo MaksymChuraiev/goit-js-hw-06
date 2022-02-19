@@ -19,3 +19,6 @@ const countsItems = () => {
 };
 
 countsItems();
+
+// const check = document.querySelector('.task1-input');
+// console.log(check.value);
