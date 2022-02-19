@@ -252,7 +252,8 @@ a {
   background: url(./img/bulb_on-removebg-preview-min.png);
 }
 
-#categories {
+#categories,
+#ingredients {
   position: absolute;
   top: 150px;
   left: 30%;
