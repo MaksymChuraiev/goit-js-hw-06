@@ -20,9 +20,6 @@ const countsItems = () => {
 
 countsItems();
 
-// const check = document.querySelector('.task1-input');
-// console.log(check.value);
-
 const checkBox = document.querySelector('#theme-switch-toggle');
 const list = document.querySelector('#categories');
 
