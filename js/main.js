@@ -22,3 +22,17 @@ countsItems();
 
 // const check = document.querySelector('.task1-input');
 // console.log(check.value);
+
+const checkBox = document.querySelector('#theme-switch-toggle');
+const list = document.querySelector('#categories');
+
+checkBox.addEventListener('change', colorChange);
+
+function colorChange(e) {
+  const check = e.target.checked;
+  if (check) {
+    list.classList.add('light');
+  } else {
+    list.classList.remove('light');
+  }
+}
